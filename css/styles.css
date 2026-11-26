@@ -449,6 +449,7 @@ label[for] {
   min-height: 46px;
   padding: 0.7rem 1.85rem;
   border: 1.5px solid #FFFFFF;
+  border-radius: var(--radius-md);
   background: rgba(23, 20, 18, 0.35);
   color: #FFFFFF;
   font-family: var(--np-font-body);
