@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kala: Kopi Single-Origin Indonesia</title>
+  <meta name="description" content="Kopi single-origin Indonesia yang disangrai mingguan dalam batch kecil, lengkap dengan panduan seduh dan ruang cicip akhir pekan.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header" data-np-sticky>
+    <input type="radio" name="np-theme" id="theme-light" class="sr-only" checked>
+    <input type="radio" name="np-theme" id="theme-dark" class="sr-only">
+    <input type="radio" name="np-theme" id="theme-system" class="sr-only">
+
+    <div class="container header-inner header-3col">
+      <a href="#top" class="brand-mark">
+        <img class="brand-logo" src="img/kala-logo.png" width="48" height="48" alt="Kala" data-np-logo>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Navigasi utama">
+        <a class="nav-link" href="#origins">Daftar Kopi</a>
+        <a class="nav-link" href="#brew-guide">Panduan Seduh</a>
+        <a class="nav-link" href="#tasting-room">Lokasi</a>
+      </nav>
+
+      <div class="header-actions">
+        <details class="theme-menu">
+          <summary class="theme-trigger" aria-label="Pilih tema tampilan">
+            <svg class="theme-ico theme-ico-light" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+            </svg>
+            <svg class="theme-ico theme-ico-dark" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <svg class="theme-ico theme-ico-system" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+          </summary>
+
+          <div class="theme-dropdown" role="menu" aria-label="Pilihan tema">
+            <label for="theme-light" class="theme-option" data-theme-opt="light">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+              </svg>
+              <span>Terang</span>
+            </label>
+            <label for="theme-dark" class="theme-option" data-theme-opt="dark">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+              <span>Gelap</span>
+            </label>
+            <label for="theme-system" class="theme-option" data-theme-opt="system">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+              <span>Sistem</span>
+            </label>
+          </div>
+        </details>
+
+        <button type="button" class="btn-menu" data-np-toggle="#menu" aria-controls="menu" aria-label="Buka menu navigasi">
+          Menu
+        </button>
+      </div>
+    </div>
+
+    <nav class="nav-mobile" id="menu" aria-label="Navigasi mobile">
+      <a class="nav-link" href="#origins">Daftar Kopi</a>
+      <a class="nav-link" href="#brew-guide">Panduan Seduh</a>
+      <a class="nav-link" href="#tasting-room">Lokasi</a>
+      <a class="nav-link" href="{{whatsapp}}">WhatsApp</a>
+    </nav>
+  </header>
+
+  <section class="hero hero-centered" id="top">
+    <img class="hero-bg-img" src="img/hero-coffee-plantation.jpg" width="720" height="404" fetchpriority="high" alt="Buah kopi merah dan hijau di kebun dataran tinggi saat matahari terbit.">
+    <div class="hero-scrim" aria-hidden="true"></div>
+
+    <div class="container hero-center-stage" data-np-reveal>
+      <p class="hero-kicker">Kopi Single-Origin Indonesia</p>
+      <h1 class="hero-title">DISANGRAI SESUAI PESANAN</h1>
+      <a class="hero-cta-outline" href="#origins">Lihat Daftar Kopi</a>
+    </div>
+  </section>
+
+  <section class="section-block" id="origins" data-np-reveal>
+    <div class="container">
+      <div class="menu-header">
+        <h2 class="section-title">Daftar Kopi Minggu Ini</h2>
+      </div>
+
+      <div class="menu-grid">
+        <article class="menu-item">
+          <div>
+            <div class="menu-item-top">
+              <span class="menu-num">01</span>
+              <span class="menu-origin">Manual Brew · Aceh Tengah, Sumatra</span>
+            </div>
+            <h3 class="menu-name">Gayo Pantan Musara</h3>
+            <p class="menu-notes">Teh hitam, kulit jeruk mandarin, manis gula aren.</p>
+          </div>
+          <div class="menu-item-bottom">
+            <span class="menu-price">Rp 135.000 per 250 gram</span>
+            <a href="#modal-gayo" class="menu-detail-btn">Detail &amp; Resep</a>
+          </div>
+        </article>
+
+        <article class="menu-item">
+          <div>
+            <div class="menu-item-top">
+              <span class="menu-num">02</span>
+              <span class="menu-origin">Manual Brew · Nusa Tenggara Timur</span>
+            </div>
+            <h3 class="menu-name">Flores Manggarai</h3>
+            <p class="menu-notes">Aprikot matang, kacang almon panggang, cokelat bersih.</p>
+          </div>
+          <div class="menu-item-bottom">
+            <span class="menu-price">Rp 128.000 per 250 gram</span>
+            <a href="#modal-flores" class="menu-detail-btn">Detail &amp; Resep</a>
+          </div>
+        </article>
+
+        <article class="menu-item">
+          <div>
+            <div class="menu-item-top">
+              <span class="menu-num">03</span>
+              <span class="menu-origin">Espresso · Jawa Barat</span>
+            </div>
+            <h3 class="menu-name">Gunung Puntang Klasik</h3>
+            <p class="menu-notes">Ceri hitam, kakao pekat, tekstur kental.</p>
+          </div>
+          <div class="menu-item-bottom">
+            <span class="menu-price">Rp 140.000 per 250 gram</span>
+            <a href="#modal-puntang" class="menu-detail-btn">Detail &amp; Resep</a>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="modal-backdrop" id="modal-gayo" role="dialog" aria-modal="true" aria-labelledby="title-gayo">
+      <a href="#origins" class="modal-overlay-close" aria-label="Tutup detail kopi"></a>
+      <div class="modal-dialog">
+        <div class="modal-head">
+          <a href="#origins" class="modal-close-icon" aria-label="Tutup detail kopi">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+            </svg>
+          </a>
+        </div>
+        <h3 id="title-gayo" class="lot-name">Gayo Pantan Musara</h3>
+        <p>Teh hitam, kulit jeruk mandarin, manis gula aren.</p>
+        <ul class="info-list">
+          <li><span class="info-key">Proses</span><span class="info-val">Proses Basah (Washed)</span></li>
+          <li><span class="info-key">Jadwal Sangrai</span><span class="info-val">Sangrai Selasa &amp; Jumat</span></li>
+          <li><span class="info-key">Harga Kemasan</span><span class="info-val">Rp 135.000 per 250 gram</span></li>
+          <li><span class="info-key">Resep Awal</span><span class="info-val">15 gram kopi<br>240 gram air (suhu 93°C)<br>Total waktu 2 menit 45 detik</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="modal-backdrop" id="modal-flores" role="dialog" aria-modal="true" aria-labelledby="title-flores">
+      <a href="#origins" class="modal-overlay-close" aria-label="Tutup detail kopi"></a>
+      <div class="modal-dialog">
+        <div class="modal-head">
+          <a href="#origins" class="modal-close-icon" aria-label="Tutup detail kopi">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+            </svg>
+          </a>
+        </div>
+        <h3 id="title-flores" class="lot-name">Flores Manggarai</h3>
+        <p>Aprikot matang, kacang almon panggang, cokelat bersih.</p>
+        <ul class="info-list">
+          <li><span class="info-key">Proses</span><span class="info-val">Proses Madu (Honey)</span></li>
+          <li><span class="info-key">Jadwal Sangrai</span><span class="info-val">Sangrai Selasa</span></li>
+          <li><span class="info-key">Harga Kemasan</span><span class="info-val">Rp 128.000 per 250 gram</span></li>
+          <li><span class="info-key">Resep Awal</span><span class="info-val">15 gram kopi<br>250 gram air (suhu 92°C)<br>Gilingan sedang-halus</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="modal-backdrop" id="modal-puntang" role="dialog" aria-modal="true" aria-labelledby="title-puntang">
+      <a href="#origins" class="modal-overlay-close" aria-label="Tutup detail kopi"></a>
+      <div class="modal-dialog">
+        <div class="modal-head">
+          <a href="#origins" class="modal-close-icon" aria-label="Tutup detail kopi">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+            </svg>
+          </a>
+        </div>
+        <h3 id="title-puntang" class="lot-name">Gunung Puntang Klasik</h3>
+        <p>Ceri hitam, kakao pekat, tekstur kental.</p>
+        <ul class="info-list">
+          <li><span class="info-key">Proses</span><span class="info-val">Proses Natural</span></li>
+          <li><span class="info-key">Jadwal Sangrai</span><span class="info-val">Sangrai Jumat</span></li>
+          <li><span class="info-key">Harga Kemasan</span><span class="info-val">Rp 140.000 per 250 gram</span></li>
+          <li><span class="info-key">Resep Awal</span><span class="info-val">18 gram kopi<br>36 gram hasil seduhan (suhu 93°C)<br>Ekstraksi 29 detik</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block" id="brew-guide" data-np-reveal>
+    <div class="container">
+      <div class="section-header-split">
+        <h2 class="section-title">Panduan Rasio Seduh</h2>
+      </div>
+
+      <div class="brew-tabs-wrap" data-np-tabs>
+        <input type="radio" name="brew-method" id="brew-v60" class="sr-only" checked>
+        <input type="radio" name="brew-method" id="brew-aeropress" class="sr-only">
+        <input type="radio" name="brew-method" id="brew-espresso" class="sr-only">
+
+        <div class="brew-tab-buttons" role="tablist" aria-label="Pilih metode seduh">
+          <label for="brew-v60" class="tab-btn np-active" data-np-tab="v60">V60 Pour Over</label>
+          <label for="brew-aeropress" class="tab-btn" data-np-tab="aeropress">Aeropress Standar</label>
+          <label for="brew-espresso" class="tab-btn" data-np-tab="espresso">Espresso</label>
+        </div>
+
+        <div class="brew-output np-active" data-np-panel="v60">
+          <div class="brew-panel-grid">
+            <div class="brew-panel-info">
+              <div class="lot-meta">Rasio 1:16</div>
+              <h3 class="lot-name">V60 Pour Over</h3>
+              <div class="recipe-specs">
+                <div>
+                  <div class="spec-label">Takaran Kopi</div>
+                  <div class="spec-value">15 gram</div>
+                </div>
+                <div>
+                  <div class="spec-label">Air atau Hasil Seduhan</div>
+                  <div class="spec-value">240 gram</div>
+                </div>
+                <div>
+                  <div class="spec-label">Suhu Air</div>
+                  <div class="spec-value">93°C</div>
+                </div>
+                <div>
+                  <div class="spec-label">Total Waktu</div>
+                  <div class="spec-value">2 menit 45 detik</div>
+                </div>
+              </div>
+              <p class="section-subtitle">Gilingan sedang-halus (garam dapur). Tuang 3 kali berat kopi untuk blooming selama 40 detik, lalu tuang sisa air dalam dua putaran stabil.</p>
+            </div>
+            <div class="brew-panel-visual">
+              <svg class="brew-gauge" viewBox="0 0 120 140" width="200" height="230" aria-hidden="true">
+                <rect x="20" y="14" width="80" height="112" rx="12" fill="none" stroke="currentColor" stroke-width="3"/>
+                <rect x="25" y="42" width="70" height="79" rx="8" fill="var(--np-primary)" opacity="0.88"/>
+                <line x1="12" y1="14" x2="108" y2="14" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="brew-output" data-np-panel="aeropress">
+          <div class="brew-panel-grid">
+            <div class="brew-panel-info">
+              <div class="lot-meta">Rasio 1:15</div>
+              <h3 class="lot-name">Aeropress Standar</h3>
+              <div class="recipe-specs">
+                <div>
+                  <div class="spec-label">Takaran Kopi</div>
+                  <div class="spec-value">15 gram</div>
+                </div>
+                <div>
+                  <div class="spec-label">Air atau Hasil Seduhan</div>
+                  <div class="spec-value">225 gram</div>
+                </div>
+                <div>
+                  <div class="spec-label">Suhu Air</div>
+                  <div class="spec-value">91°C</div>
+                </div>
+                <div>
+                  <div class="spec-label">Total Waktu</div>
+                  <div class="spec-value">2 menit</div>
+                </div>
+              </div>
+              <p class="section-subtitle">Gilingan sedang-halus. Tuang air, aduk 4 kali, diamkan hingga 1 menit 30 detik, lalu tekan perlahan selama 30 detik.</p>
+            </div>
+            <div class="brew-panel-visual">
+              <svg class="brew-gauge" viewBox="0 0 120 140" width="200" height="230" aria-hidden="true">
+                <rect x="20" y="14" width="80" height="112" rx="12" fill="none" stroke="currentColor" stroke-width="3"/>
+                <rect x="25" y="48" width="70" height="73" rx="8" fill="var(--np-primary)" opacity="0.88"/>
+                <line x1="12" y1="14" x2="108" y2="14" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="brew-output" data-np-panel="espresso">
+          <div class="brew-panel-grid">
+            <div class="brew-panel-info">
+              <div class="lot-meta">Rasio 1:2</div>
+              <h3 class="lot-name">Espresso</h3>
+              <div class="recipe-specs">
+                <div>
+                  <div class="spec-label">Takaran Kopi</div>
+                  <div class="spec-value">18 gram</div>
+                </div>
+                <div>
+                  <div class="spec-label">Air atau Hasil Seduhan</div>
+                  <div class="spec-value">36 gram</div>
+                </div>
+                <div>
+                  <div class="spec-label">Suhu Air</div>
+                  <div class="spec-value">93°C</div>
+                </div>
+                <div>
+                  <div class="spec-label">Total Waktu</div>
+                  <div class="spec-value">27 hingga 31 detik</div>
+                </div>
+              </div>
+              <p class="section-subtitle">Gilingan halus. Ratakan bubuk kopi, padatkan dengan tamper secara sejajar, dan targetkan rasio hasil 1:2.</p>
+            </div>
+            <div class="brew-panel-visual">
+              <svg class="brew-gauge" viewBox="0 0 120 140" width="200" height="230" aria-hidden="true">
+                <rect x="20" y="14" width="80" height="112" rx="12" fill="none" stroke="currentColor" stroke-width="3"/>
+                <rect x="25" y="99" width="70" height="22" rx="6" fill="var(--np-primary)" opacity="0.88"/>
+                <line x1="12" y1="14" x2="108" y2="14" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block" id="tasting-room" data-np-reveal>
+    <div class="container">
+      <div class="tasting-header">
+        <h2 class="section-title">Lokasi</h2>
+        <p class="section-subtitle">
+          Ikuti sesi cicip terpandu selama 45 menit di bar sangrai Kala.
+        </p>
+      </div>
+
+      <div class="tasting-stage">
+        <input type="checkbox" id="tasting-pin" class="sr-only">
+
+        <div class="tasting-info-card">
+          <div class="tasting-card-head">
+            <span class="lot-meta">Detail Informasi</span>
+            <label for="tasting-pin" class="modal-close-icon" aria-label="Tutup detail lokasi">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+              </svg>
+            </label>
+          </div>
+          <ul class="info-list">
+            <li>
+              <span class="info-key">Lokasi</span>
+              <span class="info-val"><a href="https://maps.google.com/?q=Kemang+Jakarta+Selatan" style="color: var(--np-primary); font-weight: 600;">Kemang, Jakarta Selatan</a></span>
+            </li>
+            <li>
+              <span class="info-key">Hari</span>
+              <span class="info-val">Sabtu &amp; Minggu</span>
+            </li>
+            <li>
+              <span class="info-key">Jam Cicip</span>
+              <span class="info-val">10:00 dan 14:00</span>
+            </li>
+            <li>
+              <span class="info-key">Kapasitas Sesi</span>
+              <span class="info-val">Maksimal 6 tamu per meja</span>
+            </li>
+            <li>
+              <span class="info-key">Telepon</span>
+              <span class="info-val"><a href="tel:+6281200001234" style="color: var(--np-primary); font-weight: 600;">+62 812-0000-1234</a></span>
+            </li>
+            <li>
+              <span class="info-key">Email</span>
+              <span class="info-val"><a href="mailto:hello@example.com" style="color: var(--np-primary); font-weight: 600;">hello@example.com</a></span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tasting-map-box">
+          <img class="tasting-map-img" src="img/indonesia-map.svg" width="1024" height="410" loading="lazy" alt="Peta Indonesia dengan titik lokasi Kala di Jakarta">
+
+          <label for="tasting-pin" class="map-pin-btn" aria-label="Buka kartu detail lokasi Kala">
+            <span class="map-pin-marker">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+              </svg>
+            </span>
+            <span class="map-pin-label">Jakarta</span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#top" class="brand-mark" style="padding-inline: 0;">
+            <img class="brand-logo" src="img/kala-logo.png" width="48" height="48" alt="Kala" data-np-logo>
+          </a>
+          <p class="footer-desc">
+            Kala adalah ruang sangrai dan bar seduh kopi single-origin Indonesia di Jakarta. Kami memilih biji kopi langsung dari petani di Aceh, Flores, dan Jawa Barat, lalu menyangrainya dalam batch kecil setiap minggu.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-heading">Media Sosial</h3>
+          <ul class="footer-list footer-social-list">
+            <li>
+              <a href="https://instagram.com/kalakopi.id" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+                <span>@kalakopi.id</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://tiktok.com/@kalakopi.id" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+                </svg>
+                <span>@kalakopi.id</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://wa.me/6281200001234" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                </svg>
+                <span>+62 812-0000-1234</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://facebook.com/kalakopi.id" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+                <span>Kala Kopi Indonesia</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://x.com/kalakopi_id" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 4l16 16"></path>
+                  <path d="M20 4L4 20"></path>
+                </svg>
+                <span>@kalakopi_id</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-heading">Kontak &amp; Jam Buka</h3>
+          <ul class="footer-list">
+            <li><a href="https://maps.google.com/?q=Kemang+Jakarta+Selatan" target="_blank" rel="noopener noreferrer">Kemang, Jakarta Selatan</a></li>
+            <li><a href="tel:+6281200001234">+62 812-0000-1234</a></li>
+            <li><a href="mailto:hello@example.com">hello@example.com</a></li>
+            <li class="footer-hours">Sabtu &amp; Minggu, 10:00 dan 14:00</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-wave">
+        <svg class="footer-wave-svg" viewBox="0 0 1440 96" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0,54 C360,6 1080,6 1440,54 L1440,96 L0,96 Z" fill="var(--np-dark)"/>
+          <g fill="#EFECE6" opacity="0.12">
+            <ellipse cx="140" cy="76" rx="13" ry="8" transform="rotate(-24 140 76)"/>
+            <ellipse cx="176" cy="68" rx="10" ry="6.5" transform="rotate(18 176 68)"/>
+            <ellipse cx="1264" cy="68" rx="10" ry="6.5" transform="rotate(-18 1264 68)"/>
+            <ellipse cx="1300" cy="76" rx="13" ry="8" transform="rotate(24 1300 76)"/>
+          </g>
+        </svg>
+        <p class="footer-wave-copy">&copy; {{year}} Kala · Kopi Single-Origin Indonesia</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
